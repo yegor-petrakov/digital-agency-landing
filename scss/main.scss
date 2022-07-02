@@ -8,6 +8,7 @@ body {
 
 .top {
     position: relative;
+    z-index: -100;
 }
 
 .top::before {
@@ -19,12 +20,16 @@ body {
     filter: blur(120px);
     left: -200px;
     top: -300px;
-    background:  #416ca36b;;
+    background:  #416ca36b;
+    z-index: -100;
 }
 
 .button {
-    display: block;
-    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 48px;
     background: #8EADD5;
     text-decoration: none;
     color: #fff;
@@ -47,6 +52,11 @@ body {
         font-weight: 700;
         color: #272D38;
         text-transform: uppercase;
+        z-index: 10;
+    }
+
+    &__menu-bars {
+        display: none;
     }
 
     &__menu {
@@ -359,3 +369,6 @@ body {
         margin-top: 110px;
     }
 }
+
+
+@import "./media-queries";
