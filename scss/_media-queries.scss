@@ -2,6 +2,7 @@
 
     body {
         overflow-x: hidden;
+        z-index: -1;
     }
 
     .arrow_button {
@@ -39,11 +40,14 @@
 
         &__menu-bars {
             display: block;
+            cursor: pointer;
             width: 24px;
             height: 24px;
+            z-index: 100;
         }
 
         &__menu-bars img {
+            cursor: pointer;
             width: 24px;
             height: 24px;
         }
@@ -359,7 +363,8 @@
             margin-top: 90px;
         }
     }
-    
 
-
+    .modal-menu__container.active {
+        display: flex;
+    }
 }

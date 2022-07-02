@@ -10,23 +10,43 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-.top {
-  position: relative;
-  z-index: -100;
+.modal-menu__container {
+  position: fixed;
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  top: 0;
+  height: 100%;
 }
 
-.top::before {
-  content: "";
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  -webkit-filter: blur(120px);
-          filter: blur(120px);
-  left: -200px;
-  top: -300px;
-  background: #416ca36b;
-  z-index: -100;
+.modal-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 130px 20px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: white;
+  -webkit-box-shadow: -5px 0px 23px 0px #0000004b;
+  box-shadow: -5px 0px 23px 0px #00000053;
+  list-style: none;
+}
+
+.modal-menu__item {
+  margin-bottom: 20px;
+}
+
+.modal-menu__item a {
+  text-decoration: none;
+  color: #272D38;
+  font-size: 18px;
 }
 
 .button {
@@ -420,6 +440,7 @@ body {
 @media screen and (max-width: 775px) {
   body {
     overflow-x: hidden;
+    z-index: -1;
   }
   .arrow_button {
     display: block;
@@ -457,10 +478,13 @@ body {
   }
   .navbar__menu-bars {
     display: block;
+    cursor: pointer;
     width: 24px;
     height: 24px;
+    z-index: 100;
   }
   .navbar__menu-bars img {
+    cursor: pointer;
     width: 24px;
     height: 24px;
   }
@@ -774,6 +798,11 @@ body {
     text-align: center;
     font-size: 12px;
     margin-top: 90px;
+  }
+  .modal-menu__container.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 /*# sourceMappingURL=main.css.map */
