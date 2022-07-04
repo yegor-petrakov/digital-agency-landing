@@ -46,8 +46,18 @@
             z-index: 100;
         }
 
-        &__menu-bars img {
+        &__menu-bars {
             cursor: pointer;
+            background-image: url("../images/menu.svg");
+            width: 24px;
+            height: 24px;
+        }
+
+        &__menu-bars.clicked {
+            cursor: pointer;
+            background-image: url("../images/cross-svgrepo-com.svg");
+            background-position: center;
+            background-size: 24px 24px;
             width: 24px;
             height: 24px;
         }
@@ -365,6 +375,7 @@
     }
 
     .modal-menu__container.active {
-        display: flex;
+        position: fixed;
+        right: 0;
     }
 }

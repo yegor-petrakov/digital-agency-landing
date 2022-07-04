@@ -6,37 +6,38 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+
+
 .modal-menu__container {
     position: fixed;
-    display: none;
-    justify-content: flex-end;
-    width: 100%;
-    top: 0;
+    background-color: rgb(255, 255, 255);
     height: 100%;
+    width: 100%;
+    padding: 20px 40px;
+    right: -4000px;
+    top: 0;
+    transition: .3s ease-in-out;
 }
 
 .modal-menu {
-    display: flex;
-    padding: 130px 20px;
-    align-items: flex-end;
-    flex-direction: column;
-
-    background: white;
-    -webkit-box-shadow: -5px 0px 23px 0px #0000004b; 
-    box-shadow: -5px 0px 23px 0px #00000053;
-
     list-style: none;
-
-    &__item {
-        margin-bottom: 20px;
-    }
-
-    &__item a {
-        text-decoration: none;
-        color: #272D38;
-        font-size: 18px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
+
+.modal-menu__item {
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+
+.modal-menu__link {
+    text-decoration: none;
+    color: #272D38;
+}
+
 
 .button {
     display: flex;
